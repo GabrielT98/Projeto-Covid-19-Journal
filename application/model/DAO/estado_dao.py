@@ -17,3 +17,15 @@ class EstadoDAO:
         estado1 = Estado("São Paulo","SP",'img/saopaulo.png',[noticia1,noticia2])
         estado2 = Estado("Rio de Janeiro","RJ",'img/riodejaneiro.png',[noticia3,noticia4])
         self.__estados = [estado1,estado2]
+
+    def find_all(self):
+        return self.__estados
+
+    def find_video_by_id(self, id:int):
+        for estado in self.__estados:
+            for noticia in estado.getNoticias():
+                if noticia.getId() == id:
+                    return noticia
+        return None
+    
+
