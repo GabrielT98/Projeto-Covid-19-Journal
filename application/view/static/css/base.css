@@ -1,0 +1,16 @@
+body{
+  
+    width: 100%;
+}
+header{
+    height: 75px;
+    background-color:#ee1300;
+}
+header a{
+    text-decoration: none;
+    font-family: opensans - 700;
+    font-size: 35px;
+    color: white;
+    margin-left: 550px;
+   
+}
