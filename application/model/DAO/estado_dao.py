@@ -21,7 +21,7 @@ class EstadoDAO:
     def find_all(self):
         return self.__estados
 
-    def find_video_by_id(self, id:int):
+    def find_noticia_by_id(self, id:int):
         for estado in self.__estados:
             for noticia in estado.getNoticias():
                 if noticia.getId() == id:
