@@ -9,7 +9,6 @@ class Noticia:
         self.__curtidas = 0
         self.__visualizacoes = 0
 
-
     def getId(self) -> int :
         return self.__id
 
