@@ -1,12 +1,18 @@
-<!DOCTYPE html>
+{% extends 'base.html'%}
 
-<html>
-    <head>
-        
+{% block body %}
 
-    </head>
+    <div class="noticia">
+    <h1>{{noticia.getTitulo()}}</h1>
+    
+    <img src="{{url_for('static', filename=noticia.getUrlImagem())}}" />
+    <h2>{{noticia.getDataPub()}}</h2>
+    <p>{{noticia.getTexto()}}</p>
+    <video id="noticia-video" controls>
+        <source src="{{url_for('static', filename=noticia.getUrlVideo())}}">
+        Seu navegador não suporta a exibição desse vídeo.
+    </video>
+    </div>
 
-    <body>
-        <h1>fes</h1>
-    </body>
-</html>
+
+{% endblock %}

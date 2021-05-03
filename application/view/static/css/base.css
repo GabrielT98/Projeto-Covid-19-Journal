@@ -1,6 +1,8 @@
 body{
   
+    margin:0;
     width: 100%;
+    background-color:#f9f9f9
 }
 header{
     height: 75px;
@@ -12,5 +14,82 @@ header a{
     font-size: 35px;
     color: white;
     margin-left: 550px;
+    
+    
+    
    
+}
+header a:hover{
+    color: black;
+}
+a{
+    text-decoration: none;
+    font-family: Arial;
+    color: black;
+}
+a:hover{
+    color: grey;
+}
+img{
+    border: 1px solid black;
+}
+.img-noticia{
+    width: 380px;
+    height:230px;
+    
+}
+.noticias h2 {
+    text-align: center;
+}
+.img-estado{
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+.noticia{
+    
+    margin-left: 40px;
+    
+}
+
+h1{
+    margin-left: 40px;
+}
+#noticia-video {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+div p{
+    width: 1000px;
+    font-family: Arial;
+    font-size: 25px;
+    text-align: justify;
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+div img{
+    width: 700px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+.noticia h1,h2{
+    text-align: center;
+}
+
+footer{
+    height: 50px;
+
+}
+footer p{
+    margin-left: 550px;
+    font-family: opensans - 700;
+    font-size: 25px;
+    color: black;
+    
 }

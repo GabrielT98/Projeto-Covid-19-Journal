@@ -1,4 +1,27 @@
 {% extends 'base.html'%}
 
-{% block content %}
+{% block body %}
+    <h1>Mais vistos: </h1>
+    {% for estado in estado_list %}
+    <section class="noticias">
+        <h2>{{estado.getNome()}}</h2>
+        
+        <img class="img-estado" src="{{url_for('static', filename=estado.getImagem())}}" />
+        <br>
+        <br>
+        <br>
+        {% for noticia in estado.getNoticias(): %}
+            <section class="noticia">
+                
+                <img class="img-noticia" src="{{url_for('static', filename=noticia.getUrlImagem())}}" />
+                <h3>{{noticia.getTitulo()}}</h3>
+                <h4>{{noticia.getDataPub()}}</h4>
+                <h4>Curtidas: {{noticia.getCurtidas()}}</h4>
+                <h4>Visualizações: {{noticia.getVisualizacoes()}}</h4>
+                <a href="{{url_for('noticia', id=noticia.getId())}}">Veja Mais</a>
+                <hr>
+            </section>
+        {% endfor %}
+    </section>
+    {% endfor %}
 {% endblock %}
